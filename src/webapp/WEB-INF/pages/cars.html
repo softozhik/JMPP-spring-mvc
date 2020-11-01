@@ -6,6 +6,12 @@
     <title></title>
 </head>
 <body>
+
+<h3>для вывода количества машин, заменить в адресной строке число после count=...<br><br>
+    <a href="/cars?count=1">Показать 1 машину</a>
+</h3>
+<p>(больше 5-ти все равно нет)</p>
+
 <div>
     <th:block th:each="msg : ${cars}">
         <h4 th:text="${msg}"></h4>

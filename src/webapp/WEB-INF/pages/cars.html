@@ -4,6 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <style>
+        table {
+            margin: 0;
+            border-spacing: 0;
+            text-align: center;
+        }
+        td {
+
+            border: 1px solid;
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
 
@@ -13,8 +25,21 @@
 <p>(больше 5-ти все равно нет)</p>
 
 <div>
+    <table>
+        <tr>
+            <td width="150" th:text="Производитель"></td>
+            <td width="150" th:text="Модель"></td>
+            <td width="150" th:text="Номер"></td>
+        </tr>
+    </table>
     <th:block th:each="msg : ${cars}">
-        <h4 th:text="${msg}"></h4>
+        <table>
+            <tr>
+                <td width="150" th:text="${msg.getBrand()}"></td>
+                <td width="150" th:text="${msg.getModel()}"></td>
+                <td width="150" th:text="${msg.getGovNumber()}"></td>
+            </tr>
+        </table>
     </th:block>
 </div>
 </body>

@@ -16,7 +16,6 @@ public class CarsService {
 
     public List<Cars> getSomeCars(int count) {
         List<Cars> someCars = new ArrayList<>();
-        System.out.println(carsDao.getAllCars());
         int i = 0;
         while (i < 5 && i < count) {
             someCars.add(carsDao.getAllCars().get(i));

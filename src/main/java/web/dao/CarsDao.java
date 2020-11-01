@@ -1,11 +1,16 @@
 package web.dao;
+
+import org.springframework.stereotype.Repository;
 import web.model.Cars;
 
 import java.util.*;
 
+@Repository
 public class CarsDao {
 
-    private List<Cars> getAllCars() {
+    public CarsDao() {}
+
+    public List<Cars> getAllCars() {
         List<Cars> allCars = new ArrayList<>();
         allCars.add(new Cars("Mersedes", "model2", "12a12"));
         allCars.add(new Cars("BMW", "B3", "384vc3"));
@@ -15,13 +20,4 @@ public class CarsDao {
         return allCars;
     }
 
-    public List<Cars> getSomeCars(int count) {
-        List<Cars> someCars = new ArrayList<>();
-        int i = 0;
-        while (i < 5 && i < count) {
-            someCars.add(getAllCars().get(i));
-            i++;
-        }
-        return someCars;
-    }
 }
